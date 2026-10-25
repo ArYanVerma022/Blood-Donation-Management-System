@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JeevanRakt - Project Presentation Deck</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #0b2545;
+            color: #212529;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .slide-container {
+            width: 100%;
+            max-width: 1100px;
+            height: 650px;
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .slide-container.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .slide-header {
+            background-color: #0b2545;
+            color: #ffffff;
+            padding: 20px 30px;
+            border-bottom: 4px solid #dc3545;
+        }
+
+        .slide-header h2 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .slide-header p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #dc3545;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        .slide-body {
+            padding: 35px 40px;
+            flex: 1;
+            overflow-y: auto;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+        }
+
+        .slide-footer {
+            background-color: #f8f9fa;
+            padding: 12px 30px;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .card-custom {
+            background: #ffffff;
+            border: 1px solid #d0e1f9;
+            border-radius: 10px;
+            padding: 20px;
+            height: 100%;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.04);
+        }
+
+        .badge-blood {
+            background-color: #dc3545;
+            color: white;
+            font-size: 0.9rem;
+            padding: 4px 10px;
+            border-radius: 12px;
+        }
+
+        .btn-nav {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            transition: all 0.2s;
+        }
+
+        .btn-nav:hover {
+            background-color: #b02a37;
+            color: white;
+        }
+
+        .btn-nav:disabled {
+            background-color: #6c757d;
+            opacity: 0.5;
+        }
+
+        .list-styled li {
+            margin-bottom: 12px;
+            font-size: 1.15rem;
+            line-height: 1.5;
+        }
+
+        /* Slide 1 Hero Specifics */
+        .title-hero {
+            background: linear-gradient(135deg, #0b2545 0%, #133c55 100%);
+            color: white;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ================= SLIDE 1: TITLE SLIDE ================= -->
+    <div class="slide-container active" id="slide-1">
+        <div class="title-hero">
+            <img src="images/blood-drop.svg" alt="Drop Logo" width="70" class="mb-3">
+            <h1 style="font-size: 3.2rem; font-weight: bold; color: #dc3545;" class="mb-2">🩸 JeevanRakt</h1>
+            <h2 style="font-size: 2.2rem; font-weight: bold;" class="mb-3">Blood Donor Management System</h2>
+            <p style="font-size: 1.3rem; color: #d0e1f9; font-style: italic;" class="mb-4">A College-Level Web Development BCA Academic Project</p>
+
+            <hr style="width: 60%; border-color: #dc3545; margin: 15px 0;">
+
+            <h3 style="font-size: 1.8rem; font-weight: bold; color: #ffffff;" class="mt-2 mb-1">Project Created By: Aryan Verma</h3>
+            <p style="font-size: 1.2rem; color: #ffc107;" class="mb-0">Student ID: <strong>241306064</strong>  |  Technology: PHP + MySQL + Bootstrap 5</p>
+        </div>
+        <div class="slide-footer">
+            <span>JeevanRakt Academic Presentation</span>
+            <span>Slide 1 of 7</span>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 2: TABLE OF CONTENTS ================= -->
+    <div class="slide-container" id="slide-2">
+        <div class="slide-header">
+            <p>JeevanRakt Presentation</p>
+            <h2>Table of Contents</h2>
+        </div>
+        <div class="slide-body">
+            <div class="row g-3">
+                <div class="col-12">
+                    <div class="card-custom d-flex align-items-center">
+                        <span class="badge-blood me-3 fs-6">01</span>
+                        <div>
+                            <strong class="fs-5 text-primary">Introduction & Background</strong>
+                            <p class="mb-0 text-muted">Problem statement, need for digital blood donor management & core objectives.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card-custom d-flex align-items-center">
+                        <span class="badge-blood me-3 fs-6">02</span>
+                        <div>
+                            <strong class="fs-5 text-primary">Real-World Applications</strong>
+                            <p class="mb-0 text-muted">Emergency patient matchmaking, blood bank stock tracking & donor screening.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card-custom d-flex align-items-center">
+                        <span class="badge-blood me-3 fs-6">03</span>
+                        <div>
+                            <strong class="fs-5 text-primary">Technology Stack & Architecture</strong>
+                            <p class="mb-0 text-muted">PHP 8 (PDO), MySQL relational database, HTML5, CSS3, Bootstrap 5 & XAMPP.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card-custom d-flex align-items-center">
+                        <span class="badge-blood me-3 fs-6">04</span>
+                        <div>
+                            <strong class="fs-5 text-primary">Key Features Included</strong>
+                            <p class="mb-0 text-muted">Donor registration, public availability directory, blood requests & admin controls.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card-custom d-flex align-items-center">
+                        <span class="badge-blood me-3 fs-6">05</span>
+                        <div>
+                            <strong class="fs-5 text-primary">Pre-Donation Health Screening Engine</strong>
+                            <p class="mb-0 text-muted">Automated questionnaire rules delivering 🟢 Proceed, 🟡 Review, or 🔴 Deferred status.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card-custom d-flex align-items-center">
+                        <span class="badge-blood me-3 fs-6">06</span>
+                        <div>
+                            <strong class="fs-5 text-primary">Conclusion & Future Enhancements</strong>
+                            <p class="mb-0 text-muted">Summary of project outcomes, educational impact & future roadmap.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-footer">
+            <span>Aryan Verma (241306064)</span>
+            <span>Slide 2 of 7</span>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 3: INTRODUCTION ================= -->
+    <div class="slide-container" id="slide-3">
+        <div class="slide-header">
+            <p>Project Overview</p>
+            <h2>Introduction & Project Background</h2>
+        </div>
+        <div class="slide-body">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card-custom border-danger">
+                        <h4 class="fw-bold text-danger mb-3"><i class="fa-solid fa-triangle-exclamation me-2"></i> Problem Statement</h4>
+                        <ul class="list-styled text-secondary ps-3 mb-0">
+                            <li>Finding blood donors during medical emergencies is often chaotic and time-consuming.</li>
+                            <li>Paper records in small hospitals lead to missing donor histories and inaccurate inventory counts.</li>
+                            <li>Absence of pre-screening causes unsafe donations or last-minute rejections at donation centers.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-custom border-primary">
+                        <h4 class="fw-bold text-primary mb-3"><i class="fa-solid fa-bullseye me-2"></i> Core Objectives</h4>
+                        <ul class="list-styled text-secondary ps-3 mb-0">
+                            <li>Digitize donor registration with blood group, contact details, and location filters.</li>
+                            <li>Automate preliminary pre-donation health screening for donor safety.</li>
+                            <li>Track real-time stock levels across all 8 blood groups with low-stock warnings.</li>
+                            <li>Automate patient blood request processing and administrative inventory sync.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-footer">
+            <span>Aryan Verma (241306064)</span>
+            <span>Slide 3 of 7</span>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 4: APPLICATION OF PROJECT ================= -->
+    <div class="slide-container" id="slide-4">
+        <div class="slide-header">
+            <p>Use Cases</p>
+            <h2>Real-World Applications of JeevanRakt</h2>
+        </div>
+        <div class="slide-body">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="card-custom">
+                        <h4 class="fw-bold text-danger mb-2"><i class="fa-solid fa-hospital me-2"></i> 1. Hospital Inventory Management</h4>
+                        <p class="fs-6 text-secondary mb-0">Allows local health clinics and small blood banks to track available units, maintain low-stock alerts, and fulfill emergency patient orders without expensive software.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-custom">
+                        <h4 class="fw-bold text-primary mb-2"><i class="fa-solid fa-hand-holding-heart me-2"></i> 2. Donor Matchmaking Directory</h4>
+                        <p class="fs-6 text-secondary mb-0">Connects patients needing immediate transfusions with nearby voluntary donors filtered by blood group, city location, and active status.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-custom">
+                        <h4 class="fw-bold text-warning text-dark mb-2"><i class="fa-solid fa-user-doctor me-2"></i> 3. Preliminary Health Assessment</h4>
+                        <p class="fs-6 text-secondary mb-0">Saves staff time by collecting donor symptoms, medical history, procedures, and alcohol intake before blood bank laboratory testing.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-custom">
+                        <h4 class="fw-bold text-success mb-2"><i class="fa-solid fa-chart-line me-2"></i> 4. Administrative Analytics & Reports</h4>
+                        <p class="fs-6 text-secondary mb-0">Provides database logging of donation histories, screening records, stock adjustments, and printable summary reports for academic evaluation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-footer">
+            <span>Aryan Verma (241306064)</span>
+            <span>Slide 4 of 7</span>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 5: TECHNOLOGY USED ================= -->
+    <div class="slide-container" id="slide-5">
+        <div class="slide-header">
+            <p>Technical Architecture</p>
+            <h2>Technology Stack Used</h2>
+        </div>
+        <div class="slide-body">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="card-custom">
+                        <h4 class="fw-bold text-primary mb-1"><i class="fa-brands fa-php me-2"></i> PHP 8.x (PDO Engine)</h4>
+                        <span class="badge bg-primary mb-2">Backend & Security</span>
+                        <p class="fs-6 text-secondary mb-0">Handles server-side execution, session authentication, input sanitization, screening rules engine, and SQL injection prevention via PDO prepared statements.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-custom">
+                        <h4 class="fw-bold text-warning text-dark mb-1"><i class="fa-solid fa-database me-2"></i> MySQL Database</h4>
+                        <span class="badge bg-warning text-dark mb-2">7 Relational Tables</span>
+                        <p class="fs-6 text-secondary mb-0">Stores admin credentials, user accounts, donor profiles, screening logs, donation transactions, blood stock units, and patient request records.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-custom">
+                        <h4 class="fw-bold text-danger mb-1"><i class="fa-brands fa-bootstrap me-2"></i> HTML5, CSS3 & Bootstrap 5</h4>
+                        <span class="badge bg-danger mb-2">Frontend Styling</span>
+                        <p class="fs-6 text-secondary mb-0">Clean student project visual style with light blue containers, dark blue navbar, blood red buttons, custom SVG graphics, and responsive components.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-custom">
+                        <h4 class="fw-bold text-success mb-1"><i class="fa-solid fa-server me-2"></i> XAMPP Development Stack</h4>
+                        <span class="badge bg-success mb-2">Apache + MariaDB</span>
+                        <p class="fs-6 text-secondary mb-0">Cross-platform local web server environment running Apache HTTP Server and MariaDB MySQL database for local deployment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-footer">
+            <span>Aryan Verma (241306064)</span>
+            <span>Slide 5 of 7</span>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 6: FEATURES INCLUDED ================= -->
+    <div class="slide-container" id="slide-6">
+        <div class="slide-header">
+            <p>System Capabilities</p>
+            <h2>Key Features & Screening Engine</h2>
+        </div>
+        <div class="slide-body">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card-custom">
+                        <h4 class="fw-bold text-danger mb-3"><i class="fa-solid fa-users me-2"></i> Public & Donor Modules</h4>
+                        <ul class="list-styled text-secondary ps-3 mb-0">
+                            <li><strong>Donor Registration:</strong> Validates age (18-65), blood group, contact details & duplicate checks.</li>
+                            <li><strong>Pre-Donation Screening:</strong> Evaluates symptoms, medical history, procedures & alcohol intake.</li>
+                            <li><strong>Automated Outcomes:</strong> Displays 🟢 Proceed, 🟡 Review Required, or 🔴 Temporarily Deferred.</li>
+                            <li><strong>Donor Directory:</strong> Search active donors by Blood Group, City, and Status.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-custom">
+                        <h4 class="fw-bold text-primary mb-3"><i class="fa-solid fa-gauge-high me-2"></i> Admin & Inventory Control</h4>
+                        <ul class="list-styled text-secondary ps-3 mb-0">
+                            <li><strong>Admin Dashboard:</strong> Displays 4 main stat cards, recent donors, and low-stock alerts.</li>
+                            <li><strong>Donation Auto-Sync:</strong> Logs donations, auto-increments stock & updates last donation date.</li>
+                            <li><strong>Request Completion:</strong> Approves patient requests and auto-deducts blood stock units.</li>
+                            <li><strong>Printable Reports:</strong> Generates a summary matrix for official college presentation.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-footer">
+            <span>Aryan Verma (241306064)</span>
+            <span>Slide 6 of 7</span>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 7: CONCLUSION ================= -->
+    <div class="slide-container" id="slide-7">
+        <div class="slide-header">
+            <p>Project Wrap-up</p>
+            <h2>Conclusion & Future Roadmap</h2>
+        </div>
+        <div class="slide-body">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card-custom border-success">
+                        <h4 class="fw-bold text-success mb-3"><i class="fa-solid fa-award me-2"></i> Project Summary & Conclusion</h4>
+                        <ul class="list-styled text-secondary ps-3 mb-0">
+                            <li>Successfully developed <strong>JeevanRakt</strong> as a complete BCA college project.</li>
+                            <li>Achieved the goal: <em>Simple + Clean + Functional + Medical Theme</em> design.</li>
+                            <li>Demonstrated full database CRUD operations, screening rules evaluation, and stock synchronization.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-custom border-warning">
+                        <h4 class="fw-bold text-warning text-dark mb-3"><i class="fa-solid fa-rocket me-2"></i> Future Enhancement Scope</h4>
+                        <ul class="list-styled text-secondary ps-3 mb-0">
+                            <li><strong>SMS / Email Alerts:</strong> Automated emergency notifications to compatible donors.</li>
+                            <li><strong>GPS Location Matching:</strong> Distance calculation between donors and patient hospitals.</li>
+                            <li><strong>Mobile App:</strong> Cross-platform Android app using Flutter or React Native.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-footer">
+            <span>Aryan Verma (241306064)</span>
+            <span>Slide 7 of 7</span>
+        </div>
+    </div>
+
+    <!-- Navigation Controls -->
+    <div class="mt-3 d-flex gap-3 align-items-center">
+        <button class="btn-nav" id="prevBtn" onclick="changeSlide(-1)"><i class="fa-solid fa-arrow-left me-2"></i> Previous Slide</button>
+        <span class="text-white fs-5 fw-bold" id="slideIndicator">Slide 1 / 7</span>
+        <button class="btn-nav" id="nextBtn" onclick="changeSlide(1)">Next Slide <i class="fa-solid fa-arrow-right ms-2"></i></button>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 7;
+
+        function showSlide(slideNumber) {
+            document.querySelectorAll('.slide-container').forEach(slide => {
+                slide.classList.remove('active');
+            });
+            const targetSlide = document.getElementById(`slide-${slideNumber}`);
+            if (targetSlide) {
+                targetSlide.classList.add('active');
+            }
+            document.getElementById('slideIndicator').innerText = `Slide ${slideNumber} / ${totalSlides}`;
+            document.getElementById('prevBtn').disabled = (slideNumber === 1);
+            document.getElementById('nextBtn').disabled = (slideNumber === totalSlides);
+        }
+
+        function changeSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide < 1) currentSlide = 1;
+            if (currentSlide > totalSlides) currentSlide = totalSlides;
+            showSlide(currentSlide);
+        }
+
+        // Keyboard Arrow Key Navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === 'Space') {
+                changeSlide(1);
+            } else if (e.key === 'ArrowLeft') {
+                changeSlide(-1);
+            }
+        });
+    </script>
+</body>
+</html>

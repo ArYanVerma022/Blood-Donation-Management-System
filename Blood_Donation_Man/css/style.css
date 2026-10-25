@@ -1,0 +1,222 @@
+/**
+ * JeevanRakt - Blood Donor Management System
+ * Main CSS Stylesheet
+ * Student Project by: Aryan Verma (Student ID: 241306064)
+ */
+
+:root {
+    --primary-blue: #0b2545;
+    --secondary-blue: #133c55;
+    --light-blue-bg: #f0f7ff;
+    --card-blue-bg: #e8f4f8;
+    --blood-red: #dc3545;
+    --blood-red-dark: #b02a37;
+    --blood-red-light: #f8d7da;
+    --text-dark: #212529;
+    --text-muted: #6c757d;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #f8f9fa;
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/* --- Dark Blue Navbar --- */
+.navbar-custom {
+    background-color: var(--primary-blue) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-custom .navbar-brand {
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 1.35rem;
+    letter-spacing: 0.5px;
+}
+
+.navbar-custom .nav-link {
+    color: #d0e1f9 !important;
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+    color: #ffffff !important;
+}
+
+.navbar-custom .badge-student {
+    background-color: var(--secondary-blue);
+    color: #e0e0e0;
+    font-size: 0.75rem;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* --- Hero & Light Blue Sections --- */
+.hero-section {
+    background: linear-gradient(135deg, #e8f4f8 0%, #f0f7ff 100%);
+    border-bottom: 2px solid #d0e1f9;
+    padding: 3rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(220,53,69,0.06) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.light-blue-section {
+    background-color: var(--light-blue-bg);
+    border-radius: 8px;
+    padding: 2rem;
+    border: 1px solid #d0e1f9;
+}
+
+/* --- Blood Accents & Cards --- */
+.bg-blood-red {
+    background-color: var(--blood-red) !important;
+    color: #ffffff !important;
+}
+
+.text-blood-red {
+    color: var(--blood-red) !important;
+}
+
+.btn-blood {
+    background-color: var(--blood-red);
+    color: #ffffff;
+    border: none;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.btn-blood:hover {
+    background-color: var(--blood-red-dark);
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(220,53,69,0.3);
+}
+
+.btn-outline-blood {
+    border: 2px solid var(--blood-red);
+    color: var(--blood-red);
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 0.45rem 1.4rem;
+    background: transparent;
+}
+
+.btn-outline-blood:hover {
+    background-color: var(--blood-red);
+    color: #ffffff;
+}
+
+.blood-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.blood-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.blood-group-badge {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--blood-red-light);
+    color: var(--blood-red-dark);
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--blood-red);
+}
+
+/* --- Admin Cards & Badges --- */
+.stat-card {
+    border-left: 4px solid var(--primary-blue);
+    border-radius: 6px;
+    background-color: #ffffff;
+    padding: 1.25rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.stat-card.stat-donors { border-left-color: #0d6efd; }
+.stat-card.stat-donations { border-left-color: #198754; }
+.stat-card.stat-stock { border-left-color: #dc3545; }
+.stat-card.stat-requests { border-left-color: #ffc107; }
+
+/* --- Table Styling --- */
+.custom-table {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.custom-table th {
+    background-color: var(--primary-blue);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+}
+
+/* --- Student Footer --- */
+footer {
+    background-color: var(--primary-blue);
+    color: #d0e1f9;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    border-top: 3rem solid var(--secondary-blue);
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #ffc107;
+}
+
+/* Print Friendly Styles for Reports */
+@media print {
+    .navbar, footer, .btn-print-hide {
+        display: none !important;
+    }
+    body {
+        background: #ffffff !important;
+    }
+    .container {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
